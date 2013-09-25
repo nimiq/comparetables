@@ -1,0 +1,96 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="it">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Seleziona la tabella da processa</title>
+	<script type="text/javascript">
+		// <!--
+
+				function lanciaForm1(){
+						//document.formpartita.id_partita.value = partitaid;
+						//alert(document.form1.tabella.value + ".php");
+						document.form1.action = document.form1.tabella.value + ".php";
+						document.form1.submit(); // S  C  A  T  T  A  !!!
+				};
+				
+				function lanciaForm2(){
+						//document.formpartita.id_partita.value = partitaid;
+						//alert(document.form1.tabella.value + ".php");
+						document.form2.action = document.form2.tabella.value + ".php";
+						document.form2.submit(); // S  C  A  T  T  A  !!!
+				};
+				
+		// -->
+	</script>
+</head>
+
+<body>
+
+<p>Seleziona la tabella da processare:</p>
+<form name="form1" id="form1" method="GET">
+	<table border="0" id="table1" style="border-collapse: collapse" height="30">
+		<tr>
+			<td colspan="2">
+			<p align="center"><b><font size="2">CONTROLLI&nbsp;&nbsp; DIRETTI</font></b></td>
+		</tr>
+		<tr>
+			<td bgcolor="#CCCCFF" height="30">
+			<p align="right">Tabella: </td>
+			<td bgcolor="#CCCCFF" height="30">
+			<select size="1" name="tabella">
+			<option value="T01">01</option>
+			<option value="T02" selected>02</option>
+			<option value="T03">03</option>
+			<option value="T04">04 lenta</option>
+			<option value="T05">05</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td bgcolor="#99CCFF" height="30">
+			<p align="right">Dal record: </td>
+			<td bgcolor="#99CCFF" height="30"><input type="text" name="da" size="19" value="1"></td>
+		</tr>
+		<tr>
+			<td bgcolor="#CCCCFF" height="30">
+			<p align="right">N. record: </td>
+			<td bgcolor="#CCCCFF" height="30"><input type="text" name="n" size="19" value="50"></td>
+		</tr>
+		<tr>
+			<td bgcolor="#99CCFF">Tutti i record, ma<br>
+			mosta solo NOK: </td>
+			<td bgcolor="#99CCFF"><input type="checkbox" name="solonok" value="ON"></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="right">
+			<input type="button" value="Invia" name="B1" onclick="lanciaForm1()"></td>
+		</tr>
+	</table>
+</form>
+<form name="form2" id="form2" method="GET">
+	<p>&nbsp;</p>
+	<table table border="0" id="table2" style="border-collapse: collapse" height="30">
+		<tr>
+			<td colspan="2">
+			<p align="center"><b><font size="2">CONTROLLI&nbsp; INVERSI</font></b></td>
+		</tr>
+		<tr>
+			<td bgcolor="#99CCFF" height="30">Tabella:</td>
+			<td bgcolor="#99CCFF">
+			<select size="1" name="tabella">
+			<option value="T01inv">01</option>
+			<option value="T02inv" selected>02</option>
+			<option value="T03inv">03</option>
+			<option value="T04inv">04</option>
+			<option value="T05inv">05</option>	
+			</select></td>
+
+		</tr>
+		<tr>
+			<td colspan="2"><input type="button" value="Invia" name="B1" onclick="lanciaForm2()" style="float: right"></td>
+		</tr>
+	</table>
+</form>
+</body>
+
+</html>
